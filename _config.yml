@@ -1,9 +1,9 @@
 # Site settings
 title: "My Technical Blog"
 description: "A blog about technology, programming, and software development"
-author: "Your Name"
-email: "your-email@example.com"
-url: "https://your-username.github.io"
+author: "Ventsislav Yordanov"
+email: "ventsislavy@gilat.com"
+url: "https://ventsislavy-g.github.io"
 
 # Build settings
 markdown: kramdown
