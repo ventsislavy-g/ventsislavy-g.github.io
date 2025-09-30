@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Technical Blog with Jekyll
 
 A modern, responsive technical blog built with Jekyll for GitHub Pages deployment.
