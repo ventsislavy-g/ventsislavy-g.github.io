@@ -1,24 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{% if page.lang %}{{ page.lang }}{% else %}en{% endif %}">
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Comprehensive SEO Meta Tags -->
+  {% include seo.html %}
 
-  <title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
-  <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
-
-  <!-- SEO and Social -->
+  <!-- SEO and Social (jekyll-seo-tag plugin) -->
   {% seo %}
   {% feed_meta %}
 
   <!-- Styles -->
   <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
 
-  <!-- Favicon -->
-  <link rel="icon" type="image/x-icon" href="{{ '/assets/favicon.ico' | relative_url }}">
-
-  <!-- Canonical URL -->
+  <!-- Canonical URL (handled in seo.html but keeping for compatibility) -->
   <link rel="canonical" href="{{ page.url | absolute_url }}">
 </head>
 

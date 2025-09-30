@@ -1,10 +1,18 @@
 ---
 layout: post
-title: "My First Blog Post"
+title: "Welcome to My Technical Blog: A Journey into Technology and Programming"
 date: 2025-09-30
-categories: [technology, coding]
-tags: [github, jekyll, blogging]
-excerpt: "Welcome to my new technical blog! In this first post, I share my journey into blogging with Jekyll and GitHub Pages."
+categories: [technology, coding, blogging]
+tags: [github, jekyll, blogging, web-development, programming]
+excerpt: "Launching my technical blog! Discover insights on software development, programming best practices, and the latest in technology. Join me as I share knowledge and experiences from the world of coding."
+keywords: "technical blog, programming, software development, Jekyll, GitHub Pages, web development, coding tutorials"
+image: "/assets/images/blog-welcome.jpg"
+image_alt: "Welcome to technical blog - code editor with programming languages"
+og_image: "/assets/images/og-blog-welcome.jpg"
+twitter_image: "/assets/images/twitter-blog-welcome.jpg"
+canonical_url: "https://ventsislavy-g.github.io/2025/09/30/my-first-blog-post.html"
+lang: "en"
+robots: "index,follow"
 ---
 
 # Welcome to My Technical Blog! 🚀

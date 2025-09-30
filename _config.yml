@@ -1,37 +1,31 @@
 # Site settings
 title: "My Technical Blog"
-description: "A blog about technology, programming, and software development"
+description: "A comprehensive blog about technology, programming, software development, and industry insights. Learn about modern web development, AI, DevOps, and best practices."
 author: "Ventsislav Yordanov"
 email: "ventsislavy@gilat.com"
 url: "https://ventsislavy-g.github.io"
+baseurl: ""
 
-# Build settings
-markdown: kramdown
-highlighter: rouge
-theme: minima
+# SEO and Social
+logo: /assets/images/logo.png
+social:
+  name: Ventsislav Yordanov
+  links:
+    - https://github.com/ventsislavy-g
+    - https://linkedin.com/in/ventsislav-yordanov
 
-# Plugins
-plugins:
-  - jekyll-feed
-  - jekyll-seo-tag
-  - jekyll-sitemap
+# Social links (for jekyll-seo-tag)
+twitter_username: ventsislavy
+github_username: ventsislavy-g
+linkedin_username: ventsislav-yordanov
 
-# Collections
-collections:
-  posts:
-    output: true
-
-# Pagination
-paginate: 5
-paginate_path: "/page:num/"
-
-# Social links
-twitter_username: yourhandle
-github_username: your-username
-linkedin_username: yourprofile
-
-# Custom variables
-repository: your-username/your-username.github.io
+# Author information for structured data
+author:
+  name: "Ventsislav Yordanov"
+  bio: "Software Developer passionate about technology, programming, and sharing knowledge through blogging."
+  location: "Global"
+  urls:
+    - https://github.com/ventsislavy-g
 
 # Exclude from processing
 exclude:
