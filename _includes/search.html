@@ -1,0 +1,60 @@
+<div class="search-container">
+  <input type="text" id="search-input" placeholder="Search posts..." class="search-input">
+  <div id="search-results" class="search-results" style="display: none;"></div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const searchInput = document.getElementById('search-input');
+  const searchResults = document.getElementById('search-results');
+
+  if (searchInput && searchResults) {
+    let posts = [];
+
+    // Load posts data (you would generate this in Jekyll)
+    fetch('{{ "/assets/js/posts.json" | relative_url }}')
+      .then(response => response.json())
+      .then(data => {
+        posts = data;
+      })
+      .catch(error => {
+        console.log('Search data not available');
+      });
+
+    searchInput.addEventListener('input', function() {
+      const query = this.value.toLowerCase().trim();
+
+      if (query.length < 2) {
+        searchResults.style.display = 'none';
+        return;
+      }
+
+      const matches = posts.filter(post =>
+        post.title.toLowerCase().includes(query) ||
+        post.content.toLowerCase().includes(query) ||
+        post.tags.some(tag => tag.toLowerCase().includes(query))
+      );
+
+      if (matches.length > 0) {
+        searchResults.innerHTML = matches.slice(0, 5).map(post => `
+          <a href="${post.url}" class="search-result">
+            <div class="search-result-title">${post.title}</div>
+            <div class="search-result-date">${post.date}</div>
+          </a>
+        `).join('');
+        searchResults.style.display = 'block';
+      } else {
+        searchResults.innerHTML = '<div class="no-results">No posts found</div>';
+        searchResults.style.display = 'block';
+      }
+    });
+
+    // Hide results when clicking outside
+    document.addEventListener('click', function(e) {
+      if (!searchInput.contains(e.target) && !searchResults.contains(e.target)) {
+        searchResults.style.display = 'none';
+      }
+    });
+  }
+});
+</script>

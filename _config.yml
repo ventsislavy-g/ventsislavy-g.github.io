@@ -1,0 +1,49 @@
+# Site settings
+title: "My Technical Blog"
+description: "A blog about technology, programming, and software development"
+author: "Your Name"
+email: "your-email@example.com"
+url: "https://your-username.github.io"
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+theme: minima
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# Collections
+collections:
+  posts:
+    output: true
+
+# Pagination
+paginate: 5
+paginate_path: "/page:num/"
+
+# Social links
+twitter_username: yourhandle
+github_username: your-username
+linkedin_username: yourprofile
+
+# Custom variables
+repository: your-username/your-username.github.io
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - vendor/
+  - .bundle/
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/
+  - .bundle
+
+# Include files
+include:
+  - _pages
